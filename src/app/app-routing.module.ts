@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RoleComponent } from './role/role.component';
-import { UserComponent } from './user/user.component';
-import { UserDetailComponent } from './user/user-detail/user-detail.component';
 
 const routes: Routes = [
   {
@@ -17,12 +15,9 @@ const routes: Routes = [
   },
   {
     path: 'user',
-    component: UserComponent,
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
   },
-  {
-    path: 'user/:id',
-    component: UserDetailComponent,
-  },
+ 
   {
     path: '**',
     component: HomeComponent,

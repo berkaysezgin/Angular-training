@@ -10,15 +10,14 @@ import { IgxButtonModule } from 'igniteui-angular';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { RoleComponent } from './role/role.component';
 import { ToastrModule } from 'ngx-toastr';
-import { UserComponent } from './user/user.component';
-import { UserDetailComponent } from './user/user-detail/user-detail.component';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
+
     RoleComponent,
-    UserDetailComponent
+ 
   ],
   imports: [
     BrowserModule,
@@ -27,7 +26,8 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     NgxSpinnerModule,
-    IgxButtonModule
+    IgxButtonModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent],
