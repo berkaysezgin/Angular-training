@@ -1,27 +1,32 @@
-
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-|<div class="row">
-  <div class="col-md-3">
-    <button routerLink="home">Go to home</button>
-  </div>
-  <div class="col-md-3">
-    <h2 routerLink="role">Go to Role</h2>
-  </div>
-  <div class="col-md-3">
-    <h2 routerLink="user">Go to User</h2>
-  </div>
-  <div class="col-md-3">
-    <h2 routerLink="user/7">Go to User 7 detail</h2>
-  </div>
+<app-navbar></app-navbar>
+<div class="row">
+<div class="col-md-3">
+  <app-sidebar></app-sidebar>
+  <!-- <ul>
+    <li routerLink="home">
+      Home
+    </li>
+    <li routerLink="role">
+      Role
+    </li>
+    <li routerLink="user">
+      User
+    </li>
+    <ul>
+      <li routerLink="user/5">
+        User 5 Detail
+      </li>
+      <li routerLink="user/5/role">
+        User 5 Role
+      </li>
+    </ul>
+  </ul> -->
 </div>
-<router-outlet></router-outlet>
+<div class="col-md-8">
+  <router-outlet></router-outlet>
+</div>
+</div>
+
 <ngx-spinner
   bdColor="rgba(51,51,51,0.8)"
   size="medium"
@@ -30,5 +35,3 @@
 >
   <p style="font-size: 20px; color: white">Loading...</p>
 </ngx-spinner>
-<button igxButton="flat">flat</button>
-<button>kaydet</button>

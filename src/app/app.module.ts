@@ -1,4 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { IgxButtonModule, IgxIconModule, IgxNavbarModule, IgxNavigationDrawerModule } from 'igniteui-angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -6,17 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
-import { IgxButtonModule } from 'igniteui-angular';
+import { NavbarComponent } from './navbar/navbar.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { RoleComponent } from './role/role.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { ToastrModule } from 'ngx-toastr';
 import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     RoleComponent,
+      NavbarComponent,
+      SidebarComponent,
+   
  
   ],
   imports: [
@@ -27,7 +31,10 @@ import { UserModule } from './user/user.module';
     ToastrModule.forRoot(),
     NgxSpinnerModule,
     IgxButtonModule,
-    UserModule
+    UserModule,
+    IgxNavbarModule,
+    IgxIconModule,
+    IgxNavigationDrawerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

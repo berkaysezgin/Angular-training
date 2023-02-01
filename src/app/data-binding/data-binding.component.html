@@ -1,0 +1,54 @@
+<div class="row">   
+<div class="col-md-12">
+
+    <h2>One Way Binding <span style="font-size:0.9rem">from component to DOM</span></h2>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Interpolation</h3>
+            <p>ad:{{ user.name }}</p>
+            <p>hesaplama:{{1+2}}</p>
+            </div>
+        </div>
+        <div class="cold-md-3">
+            <h3>Property Binding</h3>
+            <!-- köşeli parantez data göndereceğim anlamına geliyor -->
+            <input [type]="type" [value]="user.name">
+
+        </div>
+        <div class="cold-md-3">
+            <h3>Attribute Binding</h3>
+            <input [type]="type" [value]="user.name" [attr.disabled]= "!user.isEditable ? 'disabled':null">
+
+        </div>
+            {{user.isEditable}}
+        <button (click)="changeEditable()">Change isEditable</button>
+        <div class="cold-md-3">
+            <h3>Class Binding</h3>
+            <p [class.red]="user.isEditable">Renk Değeri</p>
+        </div>
+        <div class="col-md-2">
+            <h3>Style Binding</h3> 
+            <p [style.color]="user.isEditable ?'blue':'red' ">Style Color</p>
+        </div>
+    </div>
+    <div class="col-md-12">
+
+        <h2>One Way Binding <span style="font-size:0.9rem">from DOM to component</span></h2>
+        <div class="row"></div>
+        <div class="col md-12">
+            <h3>Event Binding</h3>
+            <input type="type" [value]= "user.surname" (keyup.enter)= "inputSubmit($event);">
+        </div>
+
+    </div>
+    <div class="col-md-12">
+        <h2>Two Way Binding</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>ngModel</h3>
+                <input type="type" [(ngModel)] ="user.name" >
+                <p>{{user.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

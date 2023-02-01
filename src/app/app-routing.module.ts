@@ -17,7 +17,12 @@ const routes: Routes = [
     path: 'user',
     loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
   },
- 
+  {
+    path: 'data-binding',
+    loadChildren: () =>import('./data-binding/data-binding.module').then(
+    (m) => m.DataBindingModule
+      ),
+  },
   {
     path: '**',
     component: HomeComponent,

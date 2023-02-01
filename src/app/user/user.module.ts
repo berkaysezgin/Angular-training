@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 
 import { CommonModule } from '@angular/common';
+import { IgxButtonModule } from 'igniteui-angular';
 import { NgModule } from '@angular/core';
 import { UserComponent } from './user/user.component';
 import { UserDetailsComponent } from './user/user-details/user-details.component';
@@ -42,7 +43,7 @@ const routes: Routes=[
     UserRoleComponent
   ],
   imports: [
-    CommonModule,RouterModule.forChild(routes)
+    CommonModule,RouterModule.forChild(routes),IgxButtonModule
   ]
 })
 export class UserModule { }

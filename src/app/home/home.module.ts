@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
+import { IgxButtonModule } from 'igniteui-angular';
 import { NgModule } from '@angular/core';
 
 const routes:Routes=[{
@@ -12,7 +13,7 @@ const routes:Routes=[{
 @NgModule({
   declarations: [HomeComponent],
   imports: [
-    CommonModule,RouterModule.forChild(routes)
+    CommonModule,RouterModule.forChild(routes),IgxButtonModule
   ]
 })
 export class HomeModule { }
