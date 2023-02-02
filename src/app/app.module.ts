@@ -13,6 +13,7 @@ import { RoleComponent } from './role/role.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ToastrModule } from 'ngx-toastr';
 import { UserModule } from './user/user.module';
+import { StorageModule } from './storage/storage.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { UserModule } from './user/user.module';
     UserModule,
     IgxNavbarModule,
     IgxIconModule,
-    IgxNavigationDrawerModule
+    IgxNavigationDrawerModule,
+    StorageModule
   ],
   providers: [],
   bootstrap: [AppComponent],

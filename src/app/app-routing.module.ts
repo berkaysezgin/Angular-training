@@ -24,6 +24,10 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'storage',
+    loadChildren: () => import('./storage/storage.module').then((m) => m.StorageModule),
+  },
+  {
     path: '**',
     component: HomeComponent,
   },
