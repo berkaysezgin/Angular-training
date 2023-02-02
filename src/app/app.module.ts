@@ -6,14 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { CookieService } from 'ngx-cookie-service';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { RoleComponent } from './role/role.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { StorageModule } from './storage/storage.module';
 import { ToastrModule } from 'ngx-toastr';
 import { UserModule } from './user/user.module';
-import { StorageModule } from './storage/storage.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { StorageModule } from './storage/storage.module';
     IgxNavigationDrawerModule,
     StorageModule
   ],
-  providers: [],
+  providers:[CookieService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

@@ -28,6 +28,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  
   declarations: [LocalStorageComponent, CookieComponent],
   imports: [CommonModule, RouterModule.forChild(routes), FormsModule],
 })
